@@ -523,7 +523,7 @@
     </script>
 
     <!-- animasi -->
-    <script>
+    <!--<script>
       // Inisialisasi animasi saat scroll
       document.addEventListener("DOMContentLoaded", function () {
         // Animasi untuk elemen yang terlihat saat scroll
@@ -558,6 +558,23 @@
           });
         }
       });
+    </script>-->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".animate__animated"); // Ganti dengan class khusus
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate__animated", "animate__fadeIn");
+        observer.unobserve(entry.target); // Hanya trigger sekali
+      }
+    });
+  }, { threshold: 0.1 }); // Trigger saat 10% elemen terlihat
+
+  elements.forEach((el) => observer.observe(el));
+});
     </script>
 
     <!-- Tab sistem -->
