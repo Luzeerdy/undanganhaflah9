@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دعوة حفل التخرج</title>
+    <link rel="stylesheet" href="undangan.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Alexandria:wght@100..900&family=Cairo:wght@200..1000&family=Reem+Kufi:wght@400..700&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&family=Almarai:wght@300;400;700&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet" />
+
+    <!-- simplyCountdown -->
+    <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
+    <script src="countdown/simplyCountdown.min.js"></script>
+
+    <!-- bootstrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+
+    <!-- Animasi -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+
+  <body>
+    <!-- Particle Background Canvas -->
+    <div class="background-container">
+      <div class="background-image"></div>
+      <!-- Elemen untuk gambar background -->
+      <canvas id="particles-bg"></canvas>
+      <!-- Canvas untuk partikel -->
+    </div>
+
+    <!-- Hero -->
+    <section
+      id="hero"
+      class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
+      <main>
+        <h1>حفل تخرج</h1>
+        <p>الدفعة التاسعة - طالبات قسم اللغة العربية</p>
+        <div class="simply-countdown1"></div>
+        <h2>&</h2>
+        <div class="simply-countdown"></div>
+        <a href="#muqoddimah" class="btn btn-lg mt-4" onClick="enableScroll()"
+          >افتح الدعوة</a
+        >
+      </main>
+    </section>
+
+    <!-- Muqoddimah -->
+    <section
+      id="muqoddimah"
+      class="muqoddimah w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="animate__animated animate__fadeInUp">
+              بسم الله الرحمن الرحيم
+            </h2>
+            <h3 class="animate__animated animate__fadeInUp animate__slow-2s">
+              رفاقي يا كرامَ الحُبِّ دومًا
+            </h3>
+            <h3 class="animate__animated animate__fadeInUp animate__slow-2s">
+              بدونِكمُ يَـضيعُ النورُ فينا
+            </h3>
+            <h3 class="animate__animated animate__fadeInUp animate__slow-2s">
+              تخرَّجنا، وهذا اليومُ مجدٌ
+            </h3>
+            <h3 class="animate__animated animate__fadeInUp animate__slow-2s">
+              سطَـعْنا فيهِ بالهِمَمِ السَّنينا
+            </h3>
+            <h3 class="animate__animated animate__fadeInUp animate__slow-2s">
+              دعَـوتُكُمُ لِتَحضرُوا سروري
+            </h3>
+            <h3 class="animate__animated animate__fadeInUp animate__slow-2s">
+              ففرحُ القلبِ لا يَـحلو بدونـا
+            </h3>
+            <h3 class="animate__animated animate__fadeInUp animate__slow-2s">
+              لقاؤكمُ يُزيِّنُ كلَّ حلمٍ
+            </h3>
+            <h3 class="animate__animated animate__fadeInUp animate__slow-2s">
+              ويجعلُ عُمرنا أجملَ يقينا
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Halaman Acara -->
+    <section id="acara" class="events">
+      <div class="container text-center">
+        <h1 class="animate__animated animate__zoomIn">برامج الحفل</h1>
+        <p class="animate__animated animate__fadeInUp">
+          نتشرف بدعوتكم لحضور حفل تخرج طالبات الدفعة التاسعة من قسم اللغة
+          العربية:
+        </p>
+      </div>
+
+      <!-- Event Tabs -->
+      <div class="event-tabs">
+        <button class="tab-btn active" data-tab="jadwal">
+          <i class="fas fa-graduation-cap"></i> البرامج
+        </button>
+        <button class="tab-btn" data-tab="susunan">
+          <i class="fas fa-list"></i> سلسلة البرامج
+        </button>
+      </div>
+
+      <!-- jadwal acara -->
+      <div id="jadwal" class="tab-content active animate-slideup">
+        <!-- foto -->
+        <div class="event-card animate__animated animate__fadeInLeft">
+          <div class="event-details">
+            <h2><i class="fas fa-camera"></i> جلسة تصوير التخرج</h2>
+            <hr />
+            <p>
+              <i class="fas fa-calendar-day gold-icon"></i>
+              <strong>السبت، 24 مايو 2025</strong>
+            </p>
+            <p>
+              <i class="fas fa-clock gold-icon"></i>08.00 - 12.00 بتوقيت جاكرتا
+            </p>
+            <p>
+              <i class="fas fa-map-marker-alt gold-icon"></i> أمام مباني معهد
+              العلوم الإسلامية والعربية بجاكرتا
+            </p>
+            <p>
+              <i class="fas fa-tshirt gold-icon"></i>قواعد اللباس: ثوب أسود
+              ورداء التخرج
+            </p>
+
+            <button class="map-btn" onclick="openMap('upacara')">
+              <a
+                href="https://maps.app.goo.gl/UZYLVabVK87kVAvHA"
+                target="_blank"
+                >افتح الخريطة</a
+              >
+              <i class="fas fa-external-link-alt"></i>
+            </button>
+            <img src="img/lipia.jpg" alt="lipia" width="300" height="187" />
+          </div>
+        </div>
+
+        <!-- Even Takhorruj -->
+        <div class="event-card2 animate__animated animate__fadeInRight">
+          <div class="event-details">
+            <h2><i class="fas fa-graduation-cap"></i> حفلة الوداع</h2>
+            <hr />
+            <p>
+              <i class="fas fa-calendar-day blue-icon"></i>
+              <strong>الخميس، 29 مايو 2025</strong>
+            </p>
+            <p>
+              <i class="fas fa-clock blue-icon"></i> 09.00 - 16.00 بتوقيت جاكرتا
+            </p>
+            <p>
+              <i class="fas fa-map-marker-alt blue-icon"></i> Kampung Cahaya
+              Qur'an, Nambo
+            </p>
+            <p>
+              <i class="fas fa-tshirt blue-icon"></i> قواعد اللباس: غير محدد
+              (ملابس حرة)
+            </p>
+            <button class="map-btn2" onclick="openMap('party')">
+              <a
+                href="https://maps.app.goo.gl/9SFW7m6ZtPa8TA13A"
+                target="_blank"
+                >افتح الخريطة
+              </a>
+              <i class="fas fa-external-link-alt"></i>
+            </button>
+            <img
+              src="img/kcq.png"
+              alt="kampung cahaya quran"
+              width="300"
+              height="180" />
+          </div>
+        </div>
+      </div>
+
+      <!-- susunan acara -->
+      <div id="susunan" class="tab-content animate-slideup" lang="id" dir="ltr">
+        <!-- foto -->
+        <div class="event-card animate__animated animate__fadeInLeft">
+          <div class="event-details">
+            <h2><i class="fas fa-camera"></i> Susunan Acara Foto Wisuda</h2>
+            <hr />
+            <ul>
+              <li>08.00 - 08.55 : Persiapan individu</li>
+              <li>08.55 - 09.00 : Pengarahan</li>
+              <li>09.00 - 09.40 : Foto kelompok mabna أ</li>
+              <li>09.40 - 10.20 : Foto individu mabna أ</li>
+              <li>10.20 - 10.25 : Pindah tempat</li>
+              <li>10.25 - 11.05 : Foto kelompok mabna ج</li>
+              <li>11.05 - 11.45 : Foto individu mabna ج</li>
+              <li>11.45 - 11.55 : Penutupan</li>
+            </ul>
+
+            <button class="map-btn" onclick="openMap('upacara')">
+              <a href="pdf/RUNDOWN ACARA FOTO WISUDA.pdf" target="_blank"
+                >Lihat rincian PDF</a
+              >
+              <i class="fas fa-external-link-alt"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Even Takhorruj -->
+        <div class="event-card2 animate__animated animate__fadeInRight">
+          <div class="event-details">
+            <h2>
+              <i class="fas fa-graduation-cap"></i> Susunan Acara Perpisahan
+            </h2>
+            <hr />
+            <ul>
+              <li>
+                09.00 - 09.45 : Pembukaan Acara
+                <ul>
+                  <li>MC membuka acara</li>
+                  <li>Tilawah Quran</li>
+                  <li>Kata sambutan dari ketua acara & ketua kelas</li>
+                  <li>Ilqo' wisudawati</li>
+                </ul>
+              </li>
+              <li>
+                09.45 - 10.15 : Nostalgia Bareng & Pesan terakhir
+                <ul>
+                  <li>Pemutaran Video Kenangan & Pesan Dakatir</li>
+                </ul>
+              </li>
+              <li>10.15 - 11.10 : Games Kelompok</li>
+              <li>11.15 - 11.35 : Foto Bersama</li>
+              <li>
+                11.35 - 12.15 : Solat Zuhur Berjamaah
+                <ul>
+                  <li>Persiapan & solat berjamaah</li>
+                </ul>
+              </li>
+              <li>12.15 - 13.15 : Makan Siang Bersama</li>
+              <li>13.15 - 13.50 : Quiz Seputar Lughoh</li>
+              <li>13.50 - 14.10 : Tukar Kado</li>
+              <li>
+                14.10 - 15.10 : Kesan & Pesan
+                <ul>
+                  <li>Menulis kesan & pesan teman-teman, ngobrol santai</li>
+                </ul>
+              </li>
+              <li>
+                15.10 - 15.40 : Solat Ashar berjamaah
+                <ul>
+                  <li>Persiapan & solat berjamaah</li>
+                </ul>
+              </li>
+              <li>
+                15.40 - 16.00 : Penutupan
+                <ul>
+                  <li>Kesimpulan acara, ucapan terima kasih, doa bersama</li>
+                </ul>
+              </li>
+            </ul>
+            <button class="map-btn2" onclick="openMap('party')">
+              <a href="" target="_blank">Lihat rincian PDF</a>
+              <i class="fas fa-external-link-alt"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Khotimah -->
+    <section class="khotimah text-center">
+      <h1 class="animate__animated animate__zoomIn">مبارك عليكن التخرج</h1>
+      <p>
+        ”اللهم اجعل هذا اليوم يوماً مباركاً، واجعل تخرجنا هذا بداية لنجاحاتنا
+        المستقبلية.<br />
+        اللهم ألهمنا العلم والحكمة، وارزقنا النجاح والتوفيق في حياتنا وعملنا،
+        واجعلنا سبباً في الخير والنفع للناس.<br />
+        اللهم أعنا على استخدام علمنا ومعرفتنا في خدمة ديننا ووطننا ومجتمعنا،
+        واجعلنا من الناجحين الذين يعملون لرفعة بلدهم وأمتهم.<br />
+        يا رب العالمين.“
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="animate__animated animate__fadeInUp animate__delay-2s">
+      <div class="footer-content">
+        <small
+          >&copy; 2025 حفل التخرج بجامعة الإمام محمد بن سعود الإسلامية في
+          إندونيسيا
+        </small>
+        <br /><small>طالبات الدفعة التاسعة - قسم اللغة العربية</small>
+        <hr />
+        <small class="block"
+          >.Design by
+          <a href="https://www.instagram.com/luz_de.shabr"
+            >@LuzdeShabr</a
+          ></small
+        >
+        <div class="social-icons">
+          <a
+            href="https://www.instagram.com/dufah9thalibat?igsh=MTI2ZHJqNnAwZzFoYQ=="
+            class="icon-circle"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://t.me/+xusgIXpKhjw5YTY9" class="icon-circle"
+            ><i class="fab fa-telegram"></i
+          ></a>
+          <a href="https://id.shp.ee/D26j4MP" class="icon-circle"
+            ><i class="fas fa-store"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Audio -->
+    <div id="audio-container">
+      <audio id="song" loop>
+        <source src="audio/Afrahaan Kubraa.mp3" type="audio/mp3" />
+      </audio>
+
+      <div class="audio-icon-wrapper" style="display: none">
+        <i class="bi bi-disc"></i>
+        <span class="mobile-audio-hint">اضغط للصوت</span>
+      </div>
+    </div>
+
+    <!-- countdown foto -->
+    <script>
+      simplyCountdown(".simply-countdown1", {
+        year: 2025, // required
+        month: 5, // required
+        day: 24, // required
+        hours: 9, // Default is 0 [0-23] integer
+        words: {
+          //words displayed into the countdown
+          days: { singular: "يوم", plural: "أيام" },
+          hours: { singular: "ساعة", plural: "ساعات" },
+          minutes: { singular: "دقيقة", plural: "دقائق" },
+          seconds: { singular: "ثانية", plural: "ثوان" },
+        },
+      });
+    </script>
+
+    <!-- countdown acara perpisahan -->
+    <script>
+      simplyCountdown(".simply-countdown", {
+        year: 2025, // required
+        month: 5, // required
+        day: 29, // required
+        hours: 9, // Default is 0 [0-23] integer
+        words: {
+          //words displayed into the countdown
+          days: { singular: "يوم", plural: "أيام" },
+          hours: { singular: "ساعة", plural: "ساعات" },
+          minutes: { singular: "دقيقة", plural: "دقائق" },
+          seconds: { singular: "ثانية", plural: "ثوان" },
+        },
+      });
+    </script>
+
+    <!-- background particle -->
+    <script>
+      // Particle Background
+      document.addEventListener("DOMContentLoaded", function () {
+        const canvas = document.getElementById("particles-bg");
+        const ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+        const particleCount = window.innerWidth < 768 ? 50 : 100;
+
+        // Colors for particles
+        const colors = ["#D4AF37", "#F5F5DC", "#A5D8FF", "#FFFFFF", "#ff8da1"];
+
+        // Create particles
+        for (let i = 0; i < particleCount; i++) {
+          particles.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * 3 + 1,
+            speedX: Math.random() * 0.5 - 0.25,
+            speedY: Math.random() * 0.5 - 0.25,
+            color: colors[Math.floor(Math.random() * colors.length)],
+          });
+        }
+
+        // Animate particles
+        function animateParticles() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+          particles.forEach((particle) => {
+            ctx.fillStyle = particle.color;
+            ctx.beginPath();
+            ctx.shadowBlur = 15;
+            ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Move particles
+            particle.x += particle.speedX;
+            particle.y += particle.speedY;
+
+            // Reset position if out of bounds
+            if (particle.x < 0 || particle.x > canvas.width)
+              particle.speedX *= -1;
+            if (particle.y < 0 || particle.y > canvas.height)
+              particle.speedY *= -1;
+          });
+
+          requestAnimationFrame(animateParticles);
+        }
+
+        animateParticles();
+
+        // Di fungsi inisialisasi partikel, tambahkan:
+        function initParticles() {
+          const canvas = document.getElementById("particles-bg");
+          const ctx = canvas.getContext("2d");
+
+          // Sesuaikan warna partikel untuk kontras dengan background
+          const colors = [
+            "var(--gold)",
+            "var(--cream)",
+            "rgba(255, 255, 255, 0.9)",
+            "rgba(165, 216, 255, 0.7)",
+            "rgba(255, 141, 161, 0.7)",
+          ];
+
+          // Buat partikel semi-transparan
+          particles.forEach((p) => {
+            ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
+            ctx.globalAlpha = 0.7; // Atur transparansi
+            // ... kode partikel lainnya
+          });
+        }
+
+        // Handle window resize
+        window.addEventListener("resize", function () {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        });
+      });
+    </script>
+
+    <!-- audio -->
+    <script>
+      const rootElement = document.querySelector(":root");
+      const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
+      const audioIcon = document.querySelector(".audio-icon-wrapper i");
+      const song = document.querySelector("#song");
+      let isPlaying = false;
+
+      function disableScroll() {
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+        window.onscroll = function () {
+          window.scrollTo(scrollTop, scrollLeft);
+        };
+
+        rootElement.style.scrollBehavior = "auto";
+      }
+
+      function enableScroll() {
+        window.onscroll = function () {};
+        rootElement.style.scrollBehavior = "smooth";
+        // localStorage.setItem('opened', 'true');
+        playAudio();
+      }
+
+      function playAudio() {
+        song.volume = 0.25;
+        audioIconWrapper.style.display = "flex";
+        song.play();
+        isPlaying = true;
+      }
+
+      audioIconWrapper.onclick = function () {
+        if (isPlaying) {
+          song.pause();
+          audioIcon.classList.remove("bi-disc");
+          audioIcon.classList.add("bi-pause-circle");
+        } else {
+          song.play();
+          audioIcon.classList.add("bi-disc");
+          audioIcon.classList.remove("bi-pause-circle");
+        }
+
+        isPlaying = !isPlaying;
+      };
+
+      // if (!localStorage.getItem('opened')){
+      //     disableScroll();
+      // }
+      disableScroll();
+    </script>
+
+    <!-- animasi -->
+    <script>
+      // Inisialisasi animasi saat scroll
+      document.addEventListener("DOMContentLoaded", function () {
+        // Animasi untuk elemen yang terlihat saat scroll
+        const animateOnScroll = function () {
+          const elements = document.querySelectorAll(".animate__animated");
+
+          elements.forEach((element) => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (elementPosition < windowHeight - 100) {
+              element.style.opacity = 1;
+
+              // Jika elemen belum memiliki class animasi, tambahkan
+              if (!element.classList.contains("animate__fadeIn")) {
+                element.classList.add("animate__fadeIn");
+              }
+            }
+          });
+        };
+
+        // Jalankan saat load pertama kali dan saat scroll
+        window.addEventListener("load", animateOnScroll);
+        window.addEventListener("scroll", animateOnScroll);
+
+        // Inisialisasi AOS (jika digunakan)
+        if (typeof AOS !== "undefined") {
+          AOS.init({
+            duration: 800,
+            easing: "ease-in-out",
+            once: true,
+          });
+        }
+      });
+    </script>
+
+    <!-- Tab sistem -->
+    <script>
+      // Tab System
+      document.querySelectorAll(".tab-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          const tabId = button.getAttribute("data-tab");
+
+          // Update active tab button
+          document.querySelectorAll(".tab-btn").forEach((btn) => {
+            btn.classList.remove("active");
+          });
+          button.classList.add("active");
+
+          // Update active tab content
+          document.querySelectorAll(".tab-content").forEach((content) => {
+            content.classList.remove("active");
+          });
+          document.getElementById(tabId).classList.add("active");
+
+          // Add animation
+          document.getElementById(tabId).classList.add("animate-slideup");
+          setTimeout(() => {
+            document.getElementById(tabId).classList.remove("animate-slideup");
+          }, 1000);
+        });
+      });
+    </script>
+  </body>
+</html>

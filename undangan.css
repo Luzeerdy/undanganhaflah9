@@ -1,0 +1,457 @@
+:root {
+  --bg: #4169e1;
+  --gold: #d4af37;
+  --cream: #f5f5dc;
+  --shadow: 0 2px 2px rgba(255, 255, 255, 0.854);
+  --animate-delay: 2s;
+  --animate-duration: 2s;
+}
+
+@font-face {
+  font-family: "Diwani Bent";
+  src: url("font/DiwaniBent.woff") format("woff2"),
+    url("font/DiwaniBent.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FS Albert Arabic Web";
+  src: url("font/FSAlbertArabicWeb-Bold.woff") format("woff2"),
+    url("font/FSAlbertArabicWeb-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Amiri";
+  min-height: 2000px;
+  background-color: var(--bg);
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+      rgba(10, 36, 99, 0.8),
+      rgba(8, 73, 138, 0.607),
+      rgba(109, 150, 246, 0.5)
+    );
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: blur();
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+}
+
+.hero h1 {
+  font-family: "Diwani Bent";
+  font-size: 8.2rem;
+  text-shadow: 0 2px 2px rgb(0, 0, 0);
+}
+
+.hero p {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Aref Ruqaa";
+  padding-top: 30px;
+  text-shadow: 0 2px 2px var(--gold);
+}
+
+.hero h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Aref Ruqaa";
+  text-shadow: 0 2px 2px var(--gold);
+}
+
+.hero a {
+  color: var(--gold);
+  background-color: white;
+  box-shadow: var(--shadow);
+  font-family: "Amiri";
+}
+
+.hero a:hover {
+  color: white;
+  background-color: var(--gold);
+}
+
+.muqoddimah {
+  background-image: url(img/biru.png);
+  background-size: cover;
+  background: linear-gradient(rgb(109, 150, 246), #d4af37, rgb(255, 255, 255));
+  min-height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  font-family: "amiri";
+}
+
+.muqoddimah h2 {
+  font-family: 'diwani bent';
+   padding-bottom: 3rem;
+  font-size: 5rem;
+}
+
+.muqoddimah h3 {
+  padding: 1rem;
+  font-family: "tajawal";
+  font-weight: 600;
+}
+
+/* Event */
+.events {
+  padding: 5rem 2rem;
+  margin-top: 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "amiri";
+  background: linear-gradient(
+    rgb(255, 255, 255),
+    rgb(248, 243, 226),
+    #d4af37,
+    rgb(109, 150, 246),
+    rgb(109, 150, 246)
+  );
+}
+
+.container {
+  margin-top: 3rem;
+}
+
+.container h1 {
+  font-family: "diwani bent";
+  padding-bottom: 2rem;
+  font-size: 5rem;
+}
+
+.container p {
+  font-size: 2rem;
+}
+
+.event-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    gap: 1rem;
+}
+
+.tab-btn {
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid var(--gold);
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tab-btn.active {
+    background: var(--gold);
+    color: white;
+}
+
+.tab-btn:hover:not(.active) {
+    background: var(--gold);
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Event Cards */
+.event-card {
+  display: flex;
+  background: white;
+  border: 2px solid var(--gold);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  margin-top: 2rem;
+}
+
+.event-card2 {
+  display: flex;
+  background: white;
+  border: 2px solid var(--bg);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  margin-top: 2rem;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+}
+
+.event-card2:hover {
+  transform: translateY(-10px);
+}
+
+.event-details {
+  flex: 1;
+  padding: 1rem;
+}
+
+.event-details h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-blue);
+}
+
+.event-details p {
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+}
+
+.event-details img {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.blue-icon {
+  color: var(--bg);
+  width: 1.2rem;
+  text-align: center;
+  margin-right: 0.5rem;
+  margin-left: 1rem;
+}
+
+.gold-icon {
+  color: var(--gold);
+  margin-right: 0.5rem;
+  margin-left: 1rem;
+}
+
+.map-btn {
+  background: var(--gold);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.map-btn2 {
+  background: var(--bg);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.map-btn:hover {
+  background: var(--secondary-blue);
+  color: #d4af37;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 51, 102, 0.3);
+}
+
+.map-btn2:hover {
+  background: var(--secondary-blue);
+  color: #4169e1;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 51, 102, 0.3);
+}
+
+.map-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.map-btn2 a {
+  text-decoration: none;
+  color: white;
+}
+
+.map-btn a:hover {
+  text-decoration: none;
+  color: var(--gold);
+}
+
+.map-btn2 a:hover {
+  text-decoration: none;
+  color: var(--bg);
+}
+
+/* susunan acara */
+#susunan {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+/* Khotimah */
+.khotimah {
+  background: linear-gradient(rgb(109, 150, 246), rgb(10, 36, 99));
+  min-height: 50vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.khotimah h1 {
+  font-family: "Diwani Bent";
+  font-size: 5rem;
+  color: white;
+  text-shadow: 0 2px 2px rgb(0, 0, 0);
+}
+
+.khotimah p {
+  font-family: 'amiri';
+  padding: 4rem;
+  font-size: 1.7rem;
+  color: white;
+  text-shadow: 0 2px 2px rgb(0, 0, 0);
+}
+
+/* Footer */
+footer {
+  background: rgb(10, 36, 99);
+  color: white;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--cream);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--gold);
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+}
+
+.icon-circle:hover {
+  background: var(--gold);
+  color: var(--bg);
+  transform: translateY(-5px);
+}
+
+.audio-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color: white;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  animation: muter 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+.mobile-audio-hint {
+  position: absolute;
+  display: flex;
+  top: -30px;
+  right: 0;
+  background: #2d4f9f;
+  color: #d4af37;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  font-family: 'fs albert arabic web';
+}
+
+
+
+/* Media Query */
+/* laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 68%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* mobile phone */
+@media (max-width: 576px) {
+  html {
+    font-size: 70%;
+  }
+}
