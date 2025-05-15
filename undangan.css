@@ -324,7 +324,7 @@ canvas {
 
 /* Khotimah */
 .khotimah {
-  background: linear-gradient(rgb(109, 150, 246), rgb(10, 36, 99));
+  background: linear-gradient(rgb(109, 150, 246), rgb(10, 36, 99), rgb(10, 36, 99));
   min-height: 50vh;
   padding-top: 5rem;
   padding-bottom: 5rem;
