@@ -343,6 +343,7 @@ canvas {
   font-size: 1.7rem;
   color: white;
   text-shadow: 0 2px 2px rgb(0, 0, 0);
+  line-height: 3rem;
 }
 
 /* Footer */
